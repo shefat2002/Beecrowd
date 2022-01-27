@@ -1,3 +1,5 @@
+// Please Do not copy and submit these code without trying more than three times.
+
 #include <iostream>
 #include <bits/stdc++.h>
 #include <math.h>
