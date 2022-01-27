@@ -1,3 +1,5 @@
+// Please Do not copy and submit these code without trying more than three times.
+
 #include <iostream>
 using namespace std;
 
@@ -25,7 +27,7 @@ int main(){
             else if(i<g)
                 cout << "Gremio venceu mais\n";
             else
-                cout << "Não houve vencedor\n";
+                cout << "NÃ£o houve vencedor\n"; //change the output according to the problem statement!!!
             break;
         }
 
