@@ -1,3 +1,5 @@
+//Please do not copy my code. Try it yourself!!! @Shefat
+
 #include <iostream>
 using namespace std;
 
