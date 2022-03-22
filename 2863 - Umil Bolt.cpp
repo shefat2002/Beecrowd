@@ -4,18 +4,18 @@ using namespace std;
 int main()
 {
 
-    while(1){
-        int n;
-        float c1 = 10.0;
-        cin >> n;
-        for(int i = 0 ; i < n ; i++){
-            float a;
+    int n;
+
+    while((cin >> n )){
+        double c1 = 100.0;
+        while(n--){
+            double a;
             cin >> a ;
             if(a < c1){
                 c1 = a;
             }
         }
-        cout << c1 << "\n";
+        cout << fixed<< setprecision(2) <<  c1 << "\n";
     }
 
 
