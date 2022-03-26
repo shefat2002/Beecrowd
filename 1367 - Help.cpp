@@ -9,12 +9,12 @@ int main()
 
         char c ;
         string s;
-        int t , corr =0 , time = 0, arr[90] = {0} , ascii  , check[90] = {0} , incur[90] = {0};
+        int t , corr =0 , time = 0, arr[91] = {0} , ascii  , check[91] = {0} , incur[91] = {0} , time_in = 0;
         for(int i = 0 ; i < n ; i ++){
             cin >> c >> t >> s;
             ascii = (int)c;
             ///cout << ascii << endl;
-            if(s == "incorrect" && arr[ascii] == 0){
+            if(s == "incorrect"){
                 check[ascii] = -1;
                 incur[ascii]++;
             }
@@ -22,14 +22,14 @@ int main()
             else if(s == "correct" && arr[ascii] ==0){
                 arr[ascii] = 1;
                 time+=t;
-                if(check[ascii] == -1) time+=20* incur[ascii];
+                if(check[ascii] == -1) time_in+=(20* incur[ascii]);
             }
 
         }
         for(int i = 65 ; i <=90 ; i++){
             if(arr[i] == 1) corr++;
         }
-        cout << corr << " " << time << endl;
+        cout << corr << " " << time+time_in << endl;
     }
 
     return 0;
