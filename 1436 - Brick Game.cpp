@@ -11,10 +11,11 @@ int main()
         for(int j = 0; j< x ; j++){
             cin >> a[j];
         }
-        int s= sizeof(a) / sizeof(a[0]);
-        sort(a , a + s);
+        //int s= sizeof(a) / sizeof(a[0]);
+        //sort(a , a + s);
+
         int m = x/2;
-        cout << a[m] << endl;
+        cout << "Case " << i+1 << ": " << a[m]  << endl;
     }
 
     return 0;
