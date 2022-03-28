@@ -2,11 +2,12 @@
 using namespace std;
 int main()
 {
-    double n;
+    unsigned long n;
     while(cin >> n){
         if(n == 0) break;
-        double b = floor(n/90);
-        double g = ceil((7*n)/90);
+        double a = n/90.0;
+        int b = floor(a*1);
+        int g = ceil(7*a);
         cout << "Brasil " << b << " x Alemanha "<< g<< "\n";
     }
 
