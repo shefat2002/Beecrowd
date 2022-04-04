@@ -1,36 +1,32 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
+
 
 int main()
 {
     int n;
-    while(cin >> n){
-        if(n == 0) break;
-
-        char c ;
+    while(cin >> n && n != 0){
+        int a , ascii, time = 0 , total = 0, inc[100] = {0} , cor[100] = {0} , hold[100] = {0};
+        char c;
         string s;
-        int t , corr =0 , time = 0, arr[91] = {0} , ascii  , check[91] = {0} , incur[91] = {0} , time_in = 0;
-        for(int i = 0 ; i < n ; i ++){
-            cin >> c >> t >> s;
+        for(int i = 0 ; i < n ; i++){
+            cin >> c >> a >> s;
             ascii = (int)c;
-            ///cout << ascii << endl;
             if(s == "incorrect"){
-                check[ascii] = -1;
-                incur[ascii]++;
+                inc[ascii]++;
             }
-
-            else if(s == "correct" && arr[ascii] ==0){
-                arr[ascii] = 1;
-                time+=t;
-                if(check[ascii] == -1) time_in+=(20* incur[ascii]);
+            else if(s == "correct"){
+                hold[ascii] = 1;
+                time += a;
+                if(inc[ascii] > 0){
+                    time += 20*inc[ascii];
+                }
             }
-
         }
-        for(int i = 65 ; i <=90 ; i++){
-            if(arr[i] == 1) corr++;
+        for(int i = 65 ; i <=90;i++){
+            if(hold[i] == 1) total++;
         }
-        cout << corr << " " << time+time_in << endl;
+        cout << total << " " << time << endl;
     }
-
     return 0;
 }
